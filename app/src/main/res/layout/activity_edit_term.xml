@@ -15,6 +15,7 @@
         android:layout_centerInParent="true"
         android:id="@+id/et_term"
         android:textSize="40sp"
+        android:hint="Term"
         android:gravity="center_horizontal"/>
 
     <EditText
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/et_term"
         android:id="@+id/et_definition"
+        android:hint="Description"
         android:gravity="center_horizontal"/>
 
     <ImageView

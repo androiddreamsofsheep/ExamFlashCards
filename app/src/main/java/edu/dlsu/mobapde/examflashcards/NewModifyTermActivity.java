@@ -29,7 +29,7 @@ public class NewModifyTermActivity extends AppCompatActivity {
 
         if(term != null){
             etTerm.setText(term.getTerm());
-            etDefinition.setText(term.getDefinition());
+            etDefinition.setText(term.getDescription());
         }
 
         ivDone.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +47,7 @@ public class NewModifyTermActivity extends AppCompatActivity {
                         term = new Term();
                     }
                     term.setTerm(inputTerm);
-                    term.setDefinition(inputDefinition);
+                    term.setDescription(inputDefinition);
 
                     data.putExtra(MainActivity.EXTRA_TERM, term);
                     setResult(RESULT_OK, data);

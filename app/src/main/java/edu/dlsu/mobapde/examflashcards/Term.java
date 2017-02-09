@@ -9,15 +9,15 @@ import android.os.Parcelable;
 public class Term implements Parcelable {
 
     private String term;
-    private String definition;
+    private String description;
 
     private int layoutPosition; // to be set only in onBindViewHolder
 
     public Term(){}
 
-    public Term(String term, String definition) {
+    public Term(String term, String description) {
         this.term = term;
-        this.definition = definition;
+        this.description = description;
     }
 
     public String getTerm() {
@@ -28,12 +28,12 @@ public class Term implements Parcelable {
         this.term = term;
     }
 
-    public String getDefinition() {
-        return definition;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDefinition(String definition) {
-        this.definition = definition;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getLayoutPosition() {
@@ -47,7 +47,7 @@ public class Term implements Parcelable {
 
     protected Term(Parcel in) {
         term = in.readString();
-        definition = in.readString();
+        description = in.readString();
         layoutPosition = in.readInt();
     }
 
@@ -59,7 +59,7 @@ public class Term implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(term);
-        dest.writeString(definition);
+        dest.writeString(description);
         dest.writeInt(layoutPosition);
     }
 

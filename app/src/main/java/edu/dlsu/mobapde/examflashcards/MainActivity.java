@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTermClick(View view, Term t) {
                 tvTerm.setText(t.getTerm());
-                tvDefinition.setText(t.getDefinition());
+                tvDefinition.setText(t.getDescription());
 
                 currentSelectedTerm = t;
             }
@@ -92,11 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void prepareData(){
         terms = new ArrayList<>();
-        terms.add(new Term("Term 1", "asdasdasdsadasdasds"));
-        terms.add(new Term("Term 2", "asdasdasdsadasdasds"));
-        terms.add(new Term("Term 3", "asdasdasdsadasdasds"));
-        terms.add(new Term("Term 4", "asdasdasdsadasdasds"));
-        terms.add(new Term("Term 5", "asdasdasdsadasdasds"));
+        terms.add(new Term("petrichor", "a pleasant smell that frequently accompanies the first rain after a long period of warm, dry weather"));
+        terms.add(new Term("dysania", "difficulty getting out of bed in the morning"));
+        terms.add(new Term("semordnilap", "words that one way forward, and another backward, eg diaper-repaid"));
+        terms.add(new Term("susurrus", "whispering or rustling"));
     }
 
 
@@ -125,6 +124,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayData(Term term){
         tvTerm.setText(term.getTerm());
-        tvDefinition.setText(term.getDefinition());
+        tvDefinition.setText(term.getDescription());
     }
 }
